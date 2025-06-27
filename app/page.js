@@ -1,103 +1,56 @@
-import Image from "next/image";
-
-export default function Home() {
+import React from 'react';
+    export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      {/* Hero Section */}
+      <section className="bg-blue-800 text-white py-20 px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          Building Your Future, Today
+        </h1>
+        <p className="text-lg md:text-xl mb-8">
+          SMAF Construction Ltd delivers trusted, high-quality construction services across Kenya.
+        </p>
+        <a
+          href="/contact"
+          className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100 transition"
+        >
+          Get a Free Quote
+        </a>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Footer */}
+      <footer className="bg-gray-800 text-gray-200 py-8 px-6 mt-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div>
+            <h2 className="text-lg font-bold mb-2">SMAF Construction Ltd</h2>
+            <p className="text-sm">
+              Excellence in structural engineering, design & commercial construction.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-bold mb-2">Quick Links</h2>
+            <ul className="text-sm space-y-1">
+              <li><a href="/" className="hover:text-white">Home</a></li>
+              <li><a href="/services" className="hover:text-white">Services</a></li>
+              <li><a href="/projects" className="hover:text-white">Projects</a></li>
+              <li><a href="/contact" className="hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-bold mb-2">Contact</h2>
+            <p className="text-sm">Nairobi, Kenya</p>
+            <p className="text-sm">Email: info@smafconstruction.com</p>
+            <p className="text-sm">Phone: +254 700 000 000</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className="text-center text-xs text-gray-400 mt-6">
+          © {new Date().getFullYear()} SMAF Construction Ltd. All rights reserved.
+        </div>
       </footer>
-    </div>
+    </>
   );
+
+
 }
